@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoWeb Pro - आपकी डिजिटल क्रांति</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="neon-loader">
+                <div class="neon-circle"></div>
+                <div class="neon-text">NeoWeb Pro</div>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Effects -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span class="logo-text">NeoWeb<span class="logo-highlight">Pro</span></span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-text="होम">
+                        <i class="fas fa-home"></i>
+                        <span>होम</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-text="हमारे बारे में">
+                        <i class="fas fa-info-circle"></i>
+                        <span>हमारे बारे में</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link" data-text="सेवाएं">
+                        <i class="fas fa-cogs"></i>
+                        <span>सेवाएं</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link" data-text="पोर्टफोलियो">
+                        <i class="fas fa-briefcase"></i>
+                        <span>पोर्टफोलियो</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link" data-text="समीक्षाएं">
+                        <i class="fas fa-star"></i>
+                        <span>समीक्षाएं</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-text="संपर्क">
+                        <i class="fas fa-envelope"></i>
+                        <span>संपर्क</span>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="pages/dashboard.html" class="btn-login">
+                    <i class="fas fa-user"></i>
+                    <span>डैशबोर्ड</span>
+                </a>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-header">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <span class="logo-text">NeoWeb<span class="logo-highlight">Pro</span></span>
+                </div>
+                <button class="mobile-close" id="mobileClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul class="mobile-nav">
+                <li><a href="#home" class="mobile-nav-link active"><i class="fas fa-home"></i> होम</a></li>
+                <li><a href="#about" class="mobile-nav-link"><i class="fas fa-info-circle"></i> हमारे बारे में</a></li>
+                <li><a href="#services" class="mobile-nav-link"><i class="fas fa-cogs"></i> सेवाएं</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link"><i class="fas fa-briefcase"></i> पोर्टफोलियो</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link"><i class="fas fa-star"></i> समीक्षाएं</a></li>
+                <li><a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> संपर्क</a></li>
+                <li><a href="pages/dashboard.html" class="mobile-nav-link"><i class="fas fa-user"></i> डैशबोर्ड</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="particles" id="particles"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="text-gradient">डिजिटल क्रांति</span> का 
+                    <span class="typing-text" id="typingText"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    हम आपके बिज़नेस को अगले लेवल पर ले जाते हैं। आर्टिफिशियल इंटेलिजेंस, ब्लॉकचेन और क्वांटम कंप्यूटिंग के साथ।
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary btn-glow">
+                        <span>शुरू करें</span>
+                        <i class="fas fa-rocket"></i>
+                    </a>
+                    <a href="#portfolio" class="btn btn-secondary">
+                        <span>हमारा काम देखें</span>
+                        <i class="fas fa-eye"></i>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500">0</div>
+                        <div class="stat-label">पूरे प्रोजेक्ट्स</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="99">0</div>
+                        <div class="stat-label">% संतुष्टि</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">पुरस्कार</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">/7 सपोर्ट</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cube">
+                    <div class="cube">
+                        <div class="face front"></div>
+                        <div class="face back"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+                <div class="hero-orbits">
+                    <div class="orbit orbit-1">
+                        <div class="orbit-dot dot-1"></div>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <div class="orbit-dot dot-2"></div>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <div class="orbit-dot dot-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">विशेषताएं जो हमें अद्वितीय बनाती हैं</h2>
+                <p class="section-subtitle">आज तक आपने ऐसी तकनीक कभी नहीं देखी</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">AI पावर्ड डिज़ाइन</h3>
+                    <p class="feature-desc">
+                        आर्टिफिशियल इंटेलिजेंस आपके लिए यूनिक डिज़ाइन जेनरेट करती है।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">मशीन लर्निंग</span>
+                        <span class="tech-tag">न्यूरल नेटवर्क</span>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">क्वांटम स्पीड</h3>
+                    <p class="feature-desc">
+                        क्वांटम कंप्यूटिंग एल्गोरिदम के साथ लाइटनिंग फास्ट परफॉर्मेंस।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">क्वांटम</span>
+                        <span class="tech-tag">पैरेलल प्रोसेसिंग</span>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">ब्लॉकचेन सिक्योरिटी</h3>
+                    <p class="feature-desc">
+                        अपरिवर्तनीय ब्लॉकचेन सुरक्षा जो हैकर्स को भी हैरान कर दे।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">ब्लॉकचेन</span>
+                        <span class="tech-tag">एन्क्रिप्शन</span>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3 class="feature-title">VR/AR एक्सपीरियंस</h3>
+                    <p class="feature-desc">
+                        वर्चुअल रियलिटी में अपने प्रोडक्ट्स का अनुभव करें।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">VR</span>
+                        <span class="tech-tag">AR</span>
+                    </div>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature-title">ऑटोमेटेड वर्कफ़्लो</h3>
+                    <p class="feature-desc">
+                        स्मार्ट रोबोट्स आपके सभी काम ऑटोमेटिक कर देते हैं।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">ऑटोमेशन</span>
+                        <span class="tech-tag">RPA</span>
+                    </div>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="feature-title">क्वांटम क्लाउड</h3>
+                    <p class="feature-desc">
+                        क्वांटम कंप्यूटर्स पर चलने वाली क्लाउड सर्विसेज।
+                    </p>
+                    <div class="feature-tech">
+                        <span class="tech-tag">क्वांटम क्लाउड</span>
+                        <span class="tech-tag">सुपरकंप्यूटिंग</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <div class="section-header">
+                        <h2 class="section-title">भविष्य को बनाते हुए</h2>
+                        <p class="section-subtitle">2030 की तकनीक, आज</p>
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            NeoWeb Pro केवल एक कंपनी नहीं है - यह एक मूवमेंट है। हम आज की तकनीक से 10 साल आगे की तकनीक बनाते हैं।
+                        </p>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>क्वांटम कंप्यूटिंग रिसर्च</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>NASA के साथ पार्टनरशिप</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>AI एथिक्स में वर्ल्ड लीडर</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-value">5+</div>
+                            <div class="stat-label">वर्ल्ड रिकॉर्ड</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-value">150+</div>
+                            <div class="stat-label">वैज्ञानिक</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-value">$50M+</div>
+                            <div class="stat-label">रिसर्च फंडिंग</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="hologram">
+                        <div class="hologram-content">
+                            <div class="hologram-text">
+                                <h3>क्वांटम सुपरपोजिशन</h3>
+                                <p>समानांतर यूनिवर्स में काम कर रहे हैं</p>
+                            </div>
+                            <div class="hologram-animation">
+                                <div class="quantum-particle"></div>
+                                <div class="quantum-particle"></div>
+                                <div class="quantum-particle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">अगली पीढ़ी की सेवाएं</h2>
+                <p class="section-subtitle">ऐसी सेवाएं जो सपने भी नहीं देख सकते</p>
+            </div>
+
+            <!-- Services Tabs -->
+            <div class="services-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="ai">AI सॉल्यूशंस</button>
+                    <button class="tab-button" data-tab="quantum">क्वांटम टेक</button>
+                    <button class="tab-button" data-tab="blockchain">ब्लॉकचेन</button>
+                    <button class="tab-button" data-tab="vr">VR/AR वर्ल्ड</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- AI Solutions -->
+                    <div class="tab-pane active" id="ai-tab">
+                        <div class="service-detail">
+                            <div class="service-visual">
+                                <div class="ai-brain">
+                                    <div class="neuron"></div>
+                                    <div class="neuron"></div>
+                                    <div class="neuron"></div>
+                                    <div class="synapse"></div>
+                                    <div class="synapse"></div>
+                                    <div class="synapse"></div>
+                                </div>
+                            </div>
+                            <div class="service-info">
+                                <h3>सुपरइंटेलिजेंट AI</h3>
+                                <p>ऐसी AI जो खुद सीखती है, खुद सुधरती है और खुद फैसले लेती है।</p>
+                                <ul class="service-features">
+                                    <li><i class="fas fa-robot"></i> सेल्फ-लर्निंग एल्गोरिदम</li>
+                                    <li><i class="fas fa-brain"></i> न्यूरल नेटवर्क ऑप्टिमाइजेशन</li>
+                                    <li><i class="fas fa-chart-line"></i> प्रेडिक्टिव एनालिटिक्स</li>
+                                    <li><i class="fas fa-comments"></i> नेचुरल लैंग्वेज प्रोसेसिंग</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary">
+                                    <span>डेमो देखें</span>
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">भविष्य के प्रोजेक्ट्स</h2>
+                <p class="section-subtitle">जो दुनिया अभी तक देखने को तैयार नहीं है</p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">सभी</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+                <button class="filter-btn" data-filter="quantum">क्वांटम</button>
+                <button class="filter-btn" data-filter="blockchain">ब्लॉकचेन</button>
+                <button class="filter-btn" data-filter="vr">VR/AR</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="ai">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800" alt="Quantum AI">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tech">
+                                    <span>क्वांटम AI</span>
+                                    <span>नेराल नेटवर्क</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>क्वांटम न्यूरल AI</h3>
+                            <p>क्वांटम कंप्यूटर्स पर चलने वाली दुनिया की पहली AI</p>
+                            <div class="portfolio-meta">
+                                <span><i class="fas fa-calendar"></i> 2024</span>
+                                <span><i class="fas fa-trophy"></i> नोबेल पुरस्कार</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="quantum">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800" alt="Quantum Computer">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-tech">
+                                    <span>क्वांटम सुपरपोजिशन</span>
+                                    <span>Qubit टेक्नोलॉजी</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-content">
+                            <h3>क्वांटम सुपरकंप्यूटर</h3>
+                            <p>1000 Qubit का दुनिया का सबसे शक्तिशाली क्वांटम कंप्यूटर</p>
+                            <div class="portfolio-meta">
+                                <span><i class="fas fa-calendar"></i> 2023</span>
+                                <span><i class="fas fa-trophy"></i> गिनीज वर्ल्ड रिकॉर्ड</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects similarly -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">हमारे बारे में क्या कहते हैं</h2>
+                <p class="section-subtitle">दुनिया के टॉप लीडर्स और साइंटिस्ट</p>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-header">
+                                    <div class="testimonial-image">
+                                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200" alt="Elon Musk">
+                                    </div>
+                                    <div class="testimonial-info">
+                                        <h4>एलन मस्क</h4>
+                                        <span>Tesla & SpaceX CEO</span>
+                                    </div>
+                                    <div class="testimonial-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                                <div class="testimonial-body">
+                                    <p>"NeoWeb Pro ने हमारे मार्स मिशन के लिए जो AI बनाई, वह इंसानों से ज्यादा स्मार्ट है।"</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more testimonials -->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <h2 class="section-title">भविष्य के साथ जुड़ें</h2>
+                    <p class="section-subtitle">हम आपके विचारों को वास्तविकता में बदलेंगे</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>ईमेल</h4>
+                                <p>contact@neowebpro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>फ़ोन</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>ऑफिस</h4>
+                                <p>सिलिकॉन वैली, कैलिफोर्निया</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">आपका नाम</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">ईमेल पता</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">सेवा</label>
+                            <select id="service" required>
+                                <option value="">चुनें</option>
+                                <option value="ai">AI सॉल्यूशंस</option>
+                                <option value="quantum">क्वांटम टेक</option>
+                                <option value="blockchain">ब्लॉकचेन</option>
+                                <option value="vr">VR/AR</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">संदेश</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-glow">
+                            <span>भविष्य शुरू करें</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span class="logo-text">NeoWeb<span class="logo-highlight">Pro</span></span>
+                    </div>
+                    <p>2030 की तकनीक, आज। भविष्य को बनाने वालों के लिए।</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>त्वरित लिंक</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">होम</a></li>
+                        <li><a href="#about">हमारे बारे में</a></li>
+                        <li><a href="#services">सेवाएं</a></li>
+                        <li><a href="#portfolio">पोर्टफोलियो</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>सेवाएं</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">AI सॉल्यूशंस</a></li>
+                        <li><a href="#">क्वांटम टेक</a></li>
+                        <li><a href="#">ब्लॉकचेन</a></li>
+                        <li><a href="#">VR/AR</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>न्यूज़लेटर</h3>
+                    <p>भविष्य की तकनीक के बारे में अपडेट पाएं</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="आपका ईमेल">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 NeoWeb Pro. सर्वाधिकार सुरक्षित। भविष्य का पेटेंट पेंडिंग।</p>
+                <div class="footer-links">
+                    <a href="#">गोपनीयता नीति</a>
+                    <a href="#">सेवा की शर्तें</a>
+                    <a href="#">कुकीज़</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
